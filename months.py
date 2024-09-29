@@ -7,10 +7,10 @@ def style_negative(val):
     if isinstance(val, bool):
         return val and "[grey53]closed[/grey53]" or "[green]open[/green]"  
     elif isinstance(val, (int, float)):
-        formatted_val = f"{val:.2f}"  
+        formatted_val = round(val)  # f"{val:.2f}"  
         if val < 0:
             return f"[red]{formatted_val}[/red]"
-        return formatted_val
+        return str(formatted_val)
     return str(val)
 
 
