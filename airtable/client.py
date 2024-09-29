@@ -43,7 +43,7 @@ class AirtableFinClient:
             else:
                 df.loc[i, 'availability'] = df.loc[i-1, 'availability'] + df.loc[i-1, 'saving'] - df.loc[i, 'withdrawals']
 
-        df['balance'] = df['income'].cumsum() - df['outcome'].cumsum() + df['saving'].cumsum() - df['withdrawals'].cumsum()
+        df['balance'] = df['income'].cumsum() - df['outcome'].cumsum() # + df['saving'].cumsum() - df['withdrawals'].cumsum()
 
         df = df.sort_values('date', ascending=False).reset_index(drop=True)
 
