@@ -1,0 +1,18 @@
+[project]
+name = "air-finclient"
+version = "0.1.0"
+description = "Airtabel Finance Base client"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dependency-injector",
+    "pydantic>=2.9.2",
+    "pydantic-settings>=2.5.2",
+    "rich>=13.8.1",
+    "pyairtable>=2.3.3",
+    "pandas>=2.2.3",
+]
+
+[tool.setuptools.packages.find]
+include = ["air_finclient*"]  
+
