@@ -20,8 +20,8 @@ class AirtableFinClient:
             extracted_record = {
                 'year': fields['year'],
                 'month': fields['month'],
-                'income': fields['income'],
-                'outcome': fields['outcome'],
+                'income': fields.get('income', 0),
+                'outcome': fields.get('outcome', 0),
                 'saving': fields.get('saving', 0), 
                 'closed': fields.get('closed', False),
                 'withdrawals': fields.get('withdrawals', 0)  
